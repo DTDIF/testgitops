@@ -1,15 +1,15 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: busybox123
+  name: busybox
   labels:
     kompose.image-pull-policy: Always
 spec:
   containers:
-    - image: busybox:stable
+    - image: busybox:latest
       command:
         - sleep
         - "3600"
       imagePullPolicy: Always
-      name: busybox123
+      name: busybox
   restartPolicy: Always
